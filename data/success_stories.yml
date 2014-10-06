@@ -1,0 +1,16 @@
+- "Brigitte Lehmann aus Rothrist -30 Kg":
+    before_image: "/samples/success_stories/before.png" # Path to a file in the public/samples folder or to a remote and external file.
+    after_image: "/samples/success_stories/after.png" # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Theo Bamert aus Kaltbrunn -50 Kg":
+    before_image: "/samples/success_stories/before.png" # Path to a file in the public/samples folder or to a remote and external file.
+    after_image: "/samples/success_stories/after.png" # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Illona Hassig von Winterthur -24 Kg":
+    before_image: "/samples/success_stories/before.png" # Path to a file in the public/samples folder or to a remote and external file.
+    after_image: "/samples/success_stories/after.png" # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Urs GrossRieder aus Bosigen -16 Kg":
+    before_image: "/samples/success_stories/before.png" # Path to a file in the public/samples folder or to a remote and external file.
+    after_image: "/samples/success_stories/after.png" # Path to a file in the public/samples folder or to a remote and external file.
+
