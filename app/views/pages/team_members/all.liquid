@@ -1,0 +1,15 @@
+---
+title: Return all the team members
+published: true
+response_type: application/json
+handle: api_team_members
+---
+{
+  "team_members": [
+    {% for member in contents.team_members join: "," %}
+    {
+      {{ member| json: "name,title,picture" }}
+    }
+    {% endfor %}
+  ]
+}

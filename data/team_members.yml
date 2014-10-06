@@ -1,0 +1,16 @@
+- "Brigitte Huwiler":
+    title: "Geschäftsinhaberin Dipl.Gesundheitsberaterin"
+    picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Silvia Müllner":
+    title: "Dipl.Gesundheitsberaterin"
+    picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Fabienne Huwiler":
+    title: "Voluptatem quis eos dolore neque"
+    picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Katerin Müllner":
+    title: "Eaque recusandae voluptas dignissimos"
+    picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
+

@@ -33,6 +33,10 @@ handle: home
     {% assign success_stories = data.success_stories %}
     {% endconsume %}
 
+    {% consume data from "http://localhost:3333/team_members/all.json" %}
+    {% assign team_members = data.team_members %}
+    {% endconsume %}
+
     .container
       .row
         .col-sm-8.col-sm-offset-2.col-xs-offset-0.col-xs-12
@@ -62,7 +66,7 @@ handle: home
             %li.active
               %a{ href: "#success-stories", data: { toggle: 'tab' } } Success stories
             %li
-              %a{ href: "#B", data: { toggle: 'tab' } } Team
+              %a{ href: "#team", data: { toggle: 'tab' } } Team
             %li
               %a{ href: "#C", data: { toggle: 'tab' } } Institute
             %li
@@ -82,8 +86,18 @@ handle: home
                         %h5 {{ success_story.title }}
                   {% endfor %}
 
-              #B.tab-pane
-                %p Howdy, I'm in Section B.
+              #team.tab-pane
+                %br
+                %ul.media-list
+                  {% for member in team_members %}
+                  .media
+                    .pull-left
+                      %img.media-object{ src: '{{ member.picture.url | resize: "100x100#" }}' }
+                    .media-body
+                      %h5.media-heading {{ member.name }}
+                      {{ member.title }}
+                  {% endfor %}
+
               #C.tab-pane
                 %p What up girl, this is Section C.
               #D.tab-pane
