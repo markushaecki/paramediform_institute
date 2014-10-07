@@ -6,11 +6,12 @@
     tags: ['Das sagt der Artz', 'Tipps']
     published_at: '2014-10-01'
 
-- "News 2":
+- "News 2: Recipe":
     description: "Sed est magni dolorem placeat dicta eveniet corporis eum."
     social_media: "Et a aspernatur ratione autem non et quae."
     text: "Et sint perspiciatis repellat provident voluptatem ipsam est enim. Sint dolorum aut fugiat. Aspernatur ipsa maxime ex sit dolores quae animi. Voluptatibus rerum porro facilis et consequuntur eum corporis sed."
     tags: ['Tipps', 'Schwitzen']
+    recipe: recipe-1
     published_at: '2014-10-06'
 
 - "News 3":

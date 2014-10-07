@@ -1,0 +1,25 @@
+{% assign recipe = news.recipe %}
+.row
+  .col-xs-6
+    %img{ src: '{{ recipe.image.url }}' }
+  .col-xs-6
+    %table.table
+      %thead
+        %tr
+          %th Amount
+          %th Ingredient
+      %tbody
+        {% for ingredient in recipe.ingredients %}
+        %tr
+          %td
+            {{ ingredient.amount }} {{ ingredient.unit }}
+          %td
+            {{ ingredient.name }}
+        {% endfor %}
+
+.row
+  .col-sm-12
+    .text-justify
+      {{ recipe.preparation }}
+
+%br
