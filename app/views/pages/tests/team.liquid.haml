@@ -1,0 +1,26 @@
+---
+title: Team
+published: true
+handle: team
+---
+{% extends tests/layout %}
+
+{% block content/tab_pane %}
+
+{% capture url %}http://{{ host }}/team_members/all.json{% endcapture %}
+{% consume data from url %}
+{% assign team_members = data.team_members %}
+{% endconsume %}
+
+%ul.media-list
+  {% for member in team_members %}
+  .media
+    .pull-left
+      %img.media-object{ src: '{{ member.picture.url | resize: "100x100#" }}' }
+    .media-body
+      %h5.media-heading {{ member.name }}
+      {{ member.title }}
+  {% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,180 @@
+---
+title: Should be deleted
+published: true
+handle: draft
+---
+!!!
+%html{lang: "en"}
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
+    %meta{charset: "utf-8"}/
+    %title {{ site.name }}
+    %meta{content: "width=device-width, initial-scale=1, maximum-scale=1", name: "viewport"}/
+
+    {{ 'bootstrap.css' | stylesheet_tag }}
+    {{ 'application.css' | stylesheet_tag }}
+
+    /[if lt IE 9]
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    %link{rel: "shortcut icon", href: "/samples/favicon.png"}/
+    %link{rel: "apple-touch-icon-precomposed", sizes: "144x144", href: "/samples/apple-touch-icon-144x144-precomposed.png"}/
+    %link{rel: "apple-touch-icon-precomposed", sizes: "114x114", href: "/samples/apple-touch-icon-114x114-precomposed.png"}/
+    %link{rel: "apple-touch-icon-precomposed", sizes: "72x72", href: "/samples/apple-touch-icon-72x72-precomposed.png"}/
+    %link{rel: "apple-touch-icon-precomposed", href: "/samples/apple-touch-icon-precomposed.png"}/
+
+    {% inline_editor %}
+
+  %body
+    {% assign port = "3334" %}
+    {% capture base_url %}http://localhost:{{port}}{% endcapture %}
+
+    {% capture url %}{{base_url}}/index.json{% endcapture %}
+    {% consume data from url %}
+    {% assign information = data.information %}
+    {% endconsume %}
+
+    {% capture url %}{{base_url}}/success_stories/all.json{% endcapture %}
+    {% consume data from url %}
+    {% assign success_stories = data.success_stories %}
+    {% endconsume %}
+
+    {% capture url %}{{base_url}}/team_members/all.json{% endcapture %}
+    {% consume data from url %}
+    {% assign team_members = data.team_members %}
+    {% endconsume %}
+
+    {% capture url %}{{base_url}}/news/all.json?page={{ params.news_page }}{% endcapture %}
+    {% consume data from url %}
+    {% assign news = data.news %}
+    {% assign news_pagination = data.pagination %}
+    {% endconsume %}
+
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2.col-xs-offset-0.col-xs-12
+          %h1 {{ page.title }}
+          %p.lead This page will never be displayed
+
+          %p.text-center
+            %img{ src: '{{ information.image }}' }
+
+      .row
+        .col-sm-4.col-sm-offset-2.col-xs-offset-0.col-xs-6
+          %p {{ information.name }}
+          %p {{ information.street }}
+          %p {{ information.city }}
+        .col-sm-4.col-xs-6
+          .text-right
+            %p Telefon {{ information.phone }}
+            %p Fax {{ information.fax }}
+            %p {{ information.email }}
+
+      %br
+
+      .row
+        .col-sm-8.col-sm-offset-2.col-xs-offset-0.col-xs-12
+          {% block content %}
+          %ul.nav.nav-tabs
+            %li
+              %a{ href: "#success-stories", data: { toggle: 'tab' } } Success stories
+            %li
+              %a{ href: "#team", data: { toggle: 'tab' } } Team
+            %li
+              %a{ href: "#C", data: { toggle: 'tab' } } Institute
+            %li.active
+              %a{ href: "#news", data: { toggle: 'tab' } } News
+          .tabbable
+            .tab-content
+              #success-stories.tab-pane
+                %br
+                .row
+                  {% for success_story in success_stories %}
+                  .col-sm-6.col-xs-12
+                    .thumbnail
+                      .images
+                        %img.pull-left{ src: '{{ success_story.before_image.url | resize: "100x100#" }}' }
+                        %img{ src: '{{ success_story.after_image.url | resize: "100x50#" }}' }
+                      .caption
+                        %h5 {{ success_story.title }}
+                  {% endfor %}
+
+              #team.tab-pane
+                %br
+                %ul.media-list
+                  {% for member in team_members %}
+                  .media
+                    .pull-left
+                      %img.media-object{ src: '{{ member.picture.url | resize: "100x100#" }}' }
+                    .media-body
+                      %h5.media-heading {{ member.name }}
+                      {{ member.title }}
+                  {% endfor %}
+
+              #C.tab-pane
+                %p What up girl, this is Section D.
+
+              #news.tab-pane.active
+                %br
+                %ul.media-list
+                  {% for news_entry in news %}
+                  .media
+                    .pull-right
+                      {{ news_entry.published_at | localized_date: '%d.%m.%Y' }}
+                    .media-body
+                      %h5.media-heading {{ news_entry.title }}
+                      {% if news_entry.tags %}
+                      .tags
+                        %span.glyphicon.glyphicon-tags
+                        {% for tag in news_entry.tags %}
+                        %span.label.label-primary {{ tag }}
+                        &nbsp;
+                        {% endfor %}
+                      {% endif %}
+                      .text
+                        {{ news_entry.text }}
+
+                    %hr
+                  {% endfor %}
+
+                  {% if news_pagination %}
+                  %ul.pagination.pagination-sm
+                    {% if news_pagination.previous_page %}
+                    %li
+                      %a{ href: "?news_page={{ news_pagination.previous_page }}" } &laquo;
+                    {% else %}
+                    %li.disabled
+                      %span &laquo;
+                    {% endif %}
+
+                    {% for part in news_pagination.parts %}
+                    {% if part.hellip_break %}
+                    %li.disabled
+                      %span &hellip;
+                    {% elsif part.title == news_pagination.current_page %}
+                    %li.active
+                      %span {{ part.title }}
+                    {% else %}
+                    %li
+                      %a{ href: "?news_page={{ part.title }}" } {{ part.title }}
+                    {% endif %}
+                    {% endfor %}
+
+                    {% if news_pagination.next_page %}
+                    %li
+                      %a{ href: "?news_page={{ news_pagination.next_page }}" } &raquo;
+                    {% else %}
+                    %li.disabled
+                      %span &raquo;
+                    {% endif %}
+
+                  {% endif %}
+
+
+          {% endblock %}
+
+
+    %script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js", type: "text/javascript"}
+    {{ 'bootstrap.min.js' | javascript_tag }}
+    :javascript
+      $(document).ready(function() {
+      });

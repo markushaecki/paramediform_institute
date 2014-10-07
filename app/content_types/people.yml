@@ -1,8 +1,8 @@
 # Human readable name of this type
-name: Team members
+name: People
 
 # Lowercase, underscored handle used to access this type
-slug: team_members
+slug: people
 
 # Explanatory text displayed in the back-office
 description: A description of the content type for the editors
@@ -26,13 +26,13 @@ order_by: manually
 # public_submission_accounts: ['john@example.com']
 
 # A list describing each field
-fields:
+fields: 
 - name: # The lowercase, underscored name of the field
     label: Name # Human readable name of the field
     type: string
     required: true
     hint: Explanatory text displayed in the back office
-    localized: false
+    localized: true
 
 - title: # The lowercase, underscored name of the field
     label: Title # Human readable name of the field

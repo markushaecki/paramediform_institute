@@ -1,8 +1,8 @@
 # Human readable name of this type
-name: Team members
+name: Recipe Ingredients
 
 # Lowercase, underscored handle used to access this type
-slug: team_members
+slug: recipe_ingredients
 
 # Explanatory text displayed in the back-office
 description: A description of the content type for the editors
@@ -34,17 +34,25 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
 
-- title: # The lowercase, underscored name of the field
-    label: Title # Human readable name of the field
-    type: text
+- amount: # The lowercase, underscored name of the field
+    label: Amount # Human readable name of the field
+    type: string
     required: false
     hint: Explanatory text displayed in the back office
     localized: false
-    # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
-- picture: # The lowercase, underscored name of the field
-    label: Picture # Human readable name of the field
-    type: file
+- unit: # The lowercase, underscored name of the field
+    label: Unit # Human readable name of the field
+    type: string
     required: false
     hint: Explanatory text displayed in the back office
     localized: false
+
+- recipe: # The lowercase, underscored name of the field
+    label: Recipe # Human readable name of the field
+    type: belongs_to
+    required: false
+    hint: Explanatory text displayed in the back office
+    localized: false
+    # Slug of the target content type (eg post if this content type is a comment)
+    class_name: recipes

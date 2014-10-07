@@ -1,14 +1,14 @@
 # Human readable name of this type
-name: Team members
+name: Interview questions
 
 # Lowercase, underscored handle used to access this type
-slug: team_members
+slug: interview_questions
 
 # Explanatory text displayed in the back-office
 description: A description of the content type for the editors
 
 # Slug of field used to identify entries by default, such as the title
-label_field_name: name
+label_field_name: question
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
 order_by: manually
@@ -27,24 +27,26 @@ order_by: manually
 
 # A list describing each field
 fields:
-- name: # The lowercase, underscored name of the field
-    label: Name # Human readable name of the field
+- question: # The lowercase, underscored name of the field
+    label: Question # Human readable name of the field
     type: string
     required: true
     hint: Explanatory text displayed in the back office
     localized: false
 
-- title: # The lowercase, underscored name of the field
-    label: Title # Human readable name of the field
+- answer: # The lowercase, underscored name of the field
+    label: Answer # Human readable name of the field
     type: text
     required: false
     hint: Explanatory text displayed in the back office
     localized: false
-    # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
+    text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
-- picture: # The lowercase, underscored name of the field
-    label: Picture # Human readable name of the field
-    type: file
+- interview: # The lowercase, underscored name of the field
+    label: Interview # Human readable name of the field
+    type: belongs_to
     required: false
     hint: Explanatory text displayed in the back office
     localized: false
+    # Slug of the target content type (eg post if this content type is a comment)
+    class_name: interviews
