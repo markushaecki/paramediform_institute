@@ -19,7 +19,8 @@ handle: news
     .pull-right
       {{ news_entry.published_at | localized_date: '%d.%m.%Y' }}
     .media-body
-      %h5.media-heading {{ news_entry.title }}
+      %h5.media-heading
+        %a{ href: "/tests/news/{{ news_entry.slug }}?page={{ params.page }}" } {{ news_entry.title }}
       {% if news_entry.tags %}
       .tags
         %span.glyphicon.glyphicon-tags

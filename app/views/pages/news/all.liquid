@@ -20,6 +20,7 @@ handle: api_news
     {% for news in paginate.collection join: "," %}
     {
       {{ news | json: "title,text,tags,published_at" }}
+      ,"slug": {{ news._slug | json }}
     }
     {% endfor %}
   ]

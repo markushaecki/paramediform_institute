@@ -24,10 +24,7 @@ published: true
     {% inline_editor %}
 
   %body
-    {% assign port = "3334" %}
-    {% capture base_url %}http://localhost:{{port}}{% endcapture %}
-
-    {% capture url %}{{base_url}}/index.json{% endcapture %}
+    {% capture url %}http://{{host}}/index.json{% endcapture %}
     {% consume data from url %}
     {% assign information = data.information %}
     {% endconsume %}
