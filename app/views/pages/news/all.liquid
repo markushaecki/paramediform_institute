@@ -6,8 +6,9 @@ handle: api_news
 ---
 {% assign current_page = params.page | default: 1 %}
 {% with_scope order_by: 'published_at desc', published_at.lt: today %}
-{% paginate contents.news by 1 %}
+{% paginate contents.news by 2 %}
 {
+  {% if paginate.total_pages != 1 %}
   "pagination": {
     "total_entries": {{ paginate.total_entries | json  }},
     "total_pages": {{ paginate.total_pages | json  }},
@@ -16,6 +17,7 @@ handle: api_news
     "previous_page": {{ paginate.previous_page | json }},
     "parts": {{ paginate.parts | json }}
   },
+  {% endif %}
   "news": [
     {% for news in paginate.collection join: "," %}
     {

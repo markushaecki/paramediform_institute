@@ -1,8 +1,10 @@
 {% assign recipe = news.recipe %}
 .row
-  .col-xs-6
-    %img{ src: '{{ recipe.image.url }}' }
-  .col-xs-6
+  .col-sm-6.col-xs-12
+    / IMAGE
+    %img.img-responsive{ src: '{{ recipe.image.url }}' }
+  .col-sm-6.col-xs-12
+    / INGREDIENTS
     %table.table
       %thead
         %tr
@@ -20,6 +22,7 @@
 .row
   .col-sm-12
     .text-justify
+      / PREPARATION
       {{ recipe.preparation }}
 
 %br

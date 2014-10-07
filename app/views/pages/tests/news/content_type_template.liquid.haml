@@ -16,6 +16,8 @@ content_type: news
 {% include interview with news %}
 {% elsif news.recipe %}
 {% include recipe with news %}
+{% elsif news.illustrative_text %}
+{% include illustrative_text with news %}
 {% else %}
 
 / # UNSUPPORTED

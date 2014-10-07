@@ -36,35 +36,36 @@ handle: news
   {% endfor %}
 
   {% if news_pagination %}
-  %ul.pagination.pagination-sm
-    {% if news_pagination.previous_page %}
-    %li
-      %a{ href: "?page={{ news_pagination.previous_page }}" } &laquo;
-    {% else %}
-    %li.disabled
-      %span &laquo;
-    {% endif %}
+  .text-center
+    %ul.pagination.pagination-sm
+      {% if news_pagination.previous_page %}
+      %li
+        %a{ href: "?page={{ news_pagination.previous_page }}" } &laquo;
+      {% else %}
+      %li.disabled
+        %span &laquo;
+      {% endif %}
 
-    {% for part in news_pagination.parts %}
-    {% if part.hellip_break %}
-    %li.disabled
-      %span &hellip;
-    {% elsif part.title == news_pagination.current_page %}
-    %li.active
-      %span {{ part.title }}
-    {% else %}
-    %li
-      %a{ href: "?page={{ part.title }}" } {{ part.title }}
-    {% endif %}
-    {% endfor %}
+      {% for part in news_pagination.parts %}
+      {% if part.hellip_break %}
+      %li.disabled
+        %span &hellip;
+      {% elsif part.title == news_pagination.current_page %}
+      %li.active
+        %span {{ part.title }}
+      {% else %}
+      %li
+        %a{ href: "?page={{ part.title }}" } {{ part.title }}
+      {% endif %}
+      {% endfor %}
 
-    {% if news_pagination.next_page %}
-    %li
-      %a{ href: "?page={{ news_pagination.next_page }}" } &raquo;
-    {% else %}
-    %li.disabled
-      %span &raquo;
-    {% endif %}
+      {% if news_pagination.next_page %}
+      %li
+        %a{ href: "?page={{ news_pagination.next_page }}" } &raquo;
+      {% else %}
+      %li.disabled
+        %span &raquo;
+      {% endif %}
 
   {% endif %}
 
