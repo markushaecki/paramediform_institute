@@ -1,0 +1,15 @@
+---
+title: Return a news entry
+published: true
+response_type: application/json
+handle: api_news_entry
+---
+{% with_scope _slug: params.slug, published_at.lt: today %}
+{% assign news_entry = contents.news.first %}
+{% endwith_scope %}
+{
+  "news_entry": {
+    {{ news_entry | json: "title,text,tags,published_at" }}
+    ,"slug": {{ news_entry._slug | json }}
+  }
+}

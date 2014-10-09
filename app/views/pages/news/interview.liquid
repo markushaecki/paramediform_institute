@@ -1,0 +1,33 @@
+---
+title: Return an interview
+published: true
+response_type: application/json
+handle: api_interview
+---
+{% with_scope _slug: params.slug, published_at.lt: today %}
+{% assign news_entry = contents.news.first %}
+{% endwith_scope %}
+{% assign interview = news_entry.interview %}
+{
+  "news_entry": {
+    {{ news_entry | json: "title,text,tags,published_at" }}
+    ,"interview": {
+      {{ interview | json: "title,description" }}
+      ,"questions": [
+        {% for question in interview.questions join: "," %}
+        {
+          {{ question | json: "question,answer" }}
+        }
+        {% endfor %}
+      ]
+      {% if interview.person %}
+      ,"person": {
+        {{ interview.person | json: "name,title" }}
+        ,"picture": {
+          "url": {{ interview.person.picture.url | prepend: host | prepend: "http://" | json }}
+        }
+      }
+      {% endif %}
+    }
+  }
+}

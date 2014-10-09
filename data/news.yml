@@ -1,4 +1,8 @@
-- "News 1: Interview":
+- "News 1: Interview [DE]":
+    title:
+      en: "News 1: Interview [EN]"
+    _slug:
+      en: "news-1-interview-en"
     description: "Qui excepturi non et."
     social_media: "Non neque quos animi ea dignissimos."
     text: "Eaque ut perferendis ipsa voluptatem et autem ab. Esse sequi voluptas minus dicta aliquam. Quam pariatur fugiat qui officia qui ut."
@@ -7,6 +11,10 @@
     published_at: '2014-10-01'
 
 - "News 2: Recipe":
+    title:
+      en: "News 2: Recipe [EN]"
+    _slug:
+      en: "news-2-recipe-en"
     description: "Sed est magni dolorem placeat dicta eveniet corporis eum."
     social_media: "Et a aspernatur ratione autem non et quae."
     text: "Et sint perspiciatis repellat provident voluptatem ipsam est enim. Sint dolorum aut fugiat. Aspernatur ipsa maxime ex sit dolores quae animi. Voluptatibus rerum porro facilis et consequuntur eum corporis sed."
@@ -14,7 +22,11 @@
     recipe: recipe-1
     published_at: '2014-10-05'
 
-- "News 3: Illustrative Text":
+- "News 3: Illustrative Text [DE]":
+    title:
+      en: "News 3: Illustrative Text [EN]"
+    _slug:
+      en: "news-3-illustrative-text-en"
     description: "Sed est magni dolorem placeat dicta eveniet corporis eum."
     social_media: "Et a aspernatur ratione autem non et quae."
     text: "Et sint perspiciatis repellat provident voluptatem ipsam est enim. Sint dolorum aut fugiat. Aspernatur ipsa maxime ex sit dolores quae animi. Voluptatibus rerum porro facilis et consequuntur eum corporis sed."
@@ -23,6 +35,10 @@
     published_at: '2014-10-06'
 
 - "News 4":
+    title:
+      en: "News 4 [EN]"
+    _slug:
+      en: "news-4-en"
     description: "Sapiente accusantium et omnis distinctio eum alias et."
     social_media: "Tenetur ea laboriosam et."
     text: "Consequatur magni perferendis amet. Reprehenderit et possimus ut repudiandae vitae omnis nisi odio. Quasi quod eos esse. Rerum in tempora similique illo reiciendis vero veniam."
@@ -30,6 +46,10 @@
     published_at: '2014-10-10'
 
 - "News 5":
+    title:
+      en: "News 5 [EN]"
+    _slug:
+      en: "news-5-en"
     description: "Ut sit harum libero dolorum sit beatae."
     social_media: "Amet asperiores et unde vel officiis veritatis."
     text: "Reiciendis repellendus et est ut soluta pariatur. Ut dolores debitis vel quae. Doloremque eos aut nihil."

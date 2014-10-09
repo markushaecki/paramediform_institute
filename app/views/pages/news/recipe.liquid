@@ -1,0 +1,29 @@
+---
+title: Return a recipe
+published: true
+response_type: application/json
+handle: api_recipe
+---
+{% with_scope _slug: params.slug, published_at.lt: today %}
+{% assign news_entry = contents.news.first %}
+{% endwith_scope %}
+{% assign recipe = news_entry.recipe %}
+{
+  "news_entry": {
+    {{ news_entry | json: "title,text,tags,published_at" }}
+    ,
+    "recipe": {
+      {{ recipe | json: "title,preparation" }}
+      ,"image": {
+        "url": {{ recipe.image.url | prepend: host | prepend: "http://" | json }}
+      }
+      ,"ingredients": [
+        {% for ingredient in recipe.ingredients join: ","  %}
+        {
+          {{ ingredient | json: "name,amount,unit" }}
+        }
+        {% endfor %}
+      ]
+    }
+  }
+}

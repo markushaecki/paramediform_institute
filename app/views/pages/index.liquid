@@ -16,7 +16,7 @@ handle: api_success_stories
 {
   "information": {
     "name": {{ name | json }},
-    "image": {{ image | json }},
+    "image": {{ image | prepend: host | prepend: "http://" | json }},
     "street": {{ street | json }},
     "city": {{ city | json }},
     "phone": {{ phone | json }},

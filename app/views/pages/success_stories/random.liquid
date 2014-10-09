@@ -7,6 +7,12 @@ handle: api_random_success_story
 {% assign success_story = contents.success_stories | sample %}
 {
   "success_story": {
-    {{ success_story | json: "title,before_image,after_image" }}
+    "title": {{ success_story.title | json }},
+    "before_image": {
+      "url": {{ success_story.before_image.url | prepend: host | prepend: "http://" | json }}
+    },
+    "after_image": {
+      "url": {{ success_story.after_image.url | prepend: host | prepend: "http://" | json }}
+    }
   }
 }

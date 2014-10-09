@@ -1,0 +1,21 @@
+---
+title: Return an interview
+published: true
+response_type: application/json
+handle: api_illustrative_text
+---
+{% with_scope _slug: params.slug, published_at.lt: today %}
+{% assign news_entry = contents.news.first %}
+{% endwith_scope %}
+{% assign illustrative_text = news_entry.illustrative_text %}
+{
+  "news_entry": {
+    {{ news_entry | json: "title,text,tags,published_at" }}
+    ,"illustrative_text": {
+      {{ illustrative_text | json: "text" }}
+      , "image": {
+        "url": {{ illustrative_text.image.url | prepend: host | prepend: "http://" | json }}
+      }
+    }
+  }
+}

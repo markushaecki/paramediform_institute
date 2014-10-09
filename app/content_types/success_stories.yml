@@ -32,7 +32,7 @@ fields:
     type: string
     required: true
     hint: Explanatory text displayed in the back office
-    localized: false
+    localized: true
 
 - before_image: # The lowercase, underscored name of the field
     label: Image # Human readable name of the field
