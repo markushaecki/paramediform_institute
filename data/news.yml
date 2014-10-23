@@ -10,6 +10,18 @@
     tags: ['Das sagt der Artz', 'Tipps']
     published_at: '2014-10-01'
 
+- "News 1: Interview [DE]":
+    title:
+      en: "News 1: Interview [EN]"
+    _slug:
+      en: "news-1-interview-en"
+    description: "Qui excepturi non et."
+    social_media: "Non neque quos animi ea dignissimos."
+    text: "Eaque ut perferendis ipsa voluptatem et autem ab. Esse sequi voluptas minus dicta aliquam. Quam pariatur fugiat qui officia qui ut."
+    interview: interview-2
+    tags: ['Das sagt der Artz', 'Tipptopps']
+    published_at: '2014-10-01'
+
 - "News 2: Recipe":
     title:
       en: "News 2: Recipe [EN]"
