@@ -10,7 +10,16 @@ handle: api_success_story
 {
   "success_story": [
     {
-      "title": {{ success_story.title | json }},
+      "prename": {{ success_story.prename | json }},
+      "name": {{ success_story.name | json }},
+      "place": {{ success_story.place | json }},
+      "lost_weight": {{ success_story.lost_weight | json }},
+      "start_date": {{ success_story.start_date | json }},
+      "programm_duration": {{ success_story.programm_duration | json }},
+      "number_of_consultations": {{ success_story.number_of_consultations | json }},
+      "feeling_of_abdiction": {{ success_story.feeling_of_abdiction | json }},
+      "experience_title": {{ success_story.experience_title | json }},
+      "experience": {{ success_story.experience | json }},
       "slug": {{ success_story._slug | json }},
       "before_image": {
         "url": {{ success_story.before_image.url | prepend: host | prepend: "http://" | json }}

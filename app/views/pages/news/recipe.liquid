@@ -11,8 +11,8 @@ handle: api_recipe
 {
   "news_entry": {
     {{ news_entry | json: "title,text,tags,published_at" }}
-    ,
-    "recipe": {
+    ,"slug": {{ news_entry._slug | json }}
+    ,"recipe": {
       {{ recipe | json: "title,preparation" }}
       ,"image": {
         "url": {{ recipe.image.url | prepend: host | prepend: "http://" | json }}

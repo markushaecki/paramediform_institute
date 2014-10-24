@@ -28,23 +28,92 @@ order_by: manually
 # A list describing each field
 fields:
 - title: # The lowercase, underscored name of the field
-    label: Title # Human readable name of the field
+    label: Titel # Human readable name of the field
     type: string
     required: true
-    hint: Explanatory text displayed in the back office
+    hint: Vorname der Person die abgenommen hat.
+    localized: true
+
+- prename: # The lowercase, underscored name of the field
+    label: Vorname # Human readable name of the field
+    type: string
+    required: true
+    hint: Vorname der Person die abgenommen hat.
+    localized: true
+
+- name: # The lowercase, underscored name of the field
+    label: Nachname # Human readable name of the field
+    type: string
+    required: true
+    hint: Nachname der Person die abgenommen hat.
+    localized: true
+
+- place: # The lowercase, underscored name of the field
+    label: Wohnort # Human readable name of the field
+    type: string
+    required: true
+    hint: Wohnort der Person die abgenommen hat.
+    localized: true
+
+- lost_weight: # The lowercase, underscored name of the field
+    label: Abgenommenes Gewicht # Human readable name of the field
+    type: string
+    required: true
+    hint: Gewicht welches die Person abgenommen hat.
     localized: true
 
 - before_image: # The lowercase, underscored name of the field
-    label: Image # Human readable name of the field
+    label: Vorherfoto # Human readable name of the field
     type: file
-    required: false
+    required: true
     hint: Explanatory text displayed in the back office
     localized: false
 
 - after_image: # The lowercase, underscored name of the field
-    label: Image # Human readable name of the field
+    label: Nachherfoto # Human readable name of the field
     type: file
-    required: false
+    required: true
     hint: Explanatory text displayed in the back office
     localized: false
 
+- start_date:
+    label: Startzeitpunkt
+    type: date
+    required: false
+    hint: Beginn des Paramediform Programmes
+    localized: false
+
+- programm_duration:
+    label: Programmdauer
+    type: string
+    required: false
+    hint: Dauer des Paramediform Programmes in Anzahl Wochen
+    localized: false
+
+- number_of_consultations:
+    label: Anzahl Betreuungen
+    type: string
+    required: false
+    hint: Anzahl Betreuungen während des Programmes
+    localized: false
+
+- feeling_of_abdiction:
+    label: Verzichtsgefühl
+    type: string
+    required: false
+    hint: Emotionale befindlichkeit während des Programmes 
+    localized: false
+
+- experience_title:
+    label: Titel Erfahrungsbericht
+    type: string
+    required: false
+    hint: Dieser Titel gehört zum Erfahrungsbericht
+    localized: false
+
+- experience:
+    label: Erfahrungsbericht
+    type: text
+    required: false
+    hint: Individueller Erfahrungsbericht zum Programm
+    localized: false
