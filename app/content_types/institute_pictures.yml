@@ -1,14 +1,14 @@
 # Human readable name of this type
-name: Details zum Institut
+name: Institute Pictures
 
 # Lowercase, underscored handle used to access this type
-slug: institute_details
+slug: institute_pictures
 
 # Explanatory text displayed in the back-office
 description: A description of the content type for the editors
 
 # Slug of field used to identify entries by default, such as the title
-label_field_name: title
+label_field_name: description
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
 order_by: manually
@@ -27,25 +27,18 @@ order_by: manually
 
 # A list describing each field
 fields:
-- title: # The lowercase, underscored name of the field
-    label: Title # Human readable name of the field
+- description: # The lowercase, underscored name of the field
+    label: Name # Human readable name of the field
     type: string
     required: true
     hint: Explanatory text displayed in the back office
     localized: false
 
-- text: # The lowercase, underscored name of the field
-    label: Text # Human readable name of the field
-    type: text
+- institute: # The lowercase, underscored name of the field
+    label: Institute # Human readable name of the field
+    type: belongs_to
     required: false
     hint: Explanatory text displayed in the back office
     localized: false
-    # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
-
-- institutepictures:
-    label: Pictures of the institute
-    type: has_many
-    hint: Pictures with description of the institute
-    localized: false
-    class_name: institute_pictures
-    inverse_of: institute
+    # Slug of the target content type (eg post if this content type is a comment)
+    class_name: institute_details
