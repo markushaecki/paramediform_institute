@@ -11,6 +11,7 @@ handle: api_interview
 {
   "news_entry": {
     {{ news_entry | json: "title,text,tags,published_at" }}
+    ,"slug": {{ news_entry._slug | json }}
     ,"interview": {
       {{ interview | json: "title,description" }}
       ,"questions": [

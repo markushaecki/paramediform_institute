@@ -11,6 +11,7 @@ handle: api_illustrative_text
 {
   "news_entry": {
     {{ news_entry | json: "title,text,tags,published_at" }}
+    ,"slug": {{ news_entry._slug | json }}
     ,"illustrative_text": {
       {{ illustrative_text | json: "text" }}
       , "image": {

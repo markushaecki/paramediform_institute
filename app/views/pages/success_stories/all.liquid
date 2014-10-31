@@ -8,7 +8,11 @@ handle: api_success_stories
   "success_stories": [
     {% for success_story in contents.success_stories join: "," %}
     {
-      "title": {{ success_story.title | json }},,
+      "prename": {{ success_story.prename | json }},,
+      "name": {{ success_story.name | json }},,
+      "place": {{ success_story.place | json }},,
+      "lost_weight": {{ success_story.lost_weight | json }},,
+      "slug": {{ success_story._slug | json }},,
       "before_image": {
         "url": {{ success_story.before_image.url | prepend: host | prepend: "http://" | json }}
       },,
