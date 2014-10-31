@@ -5,8 +5,18 @@ response_type: application/json
 handle: api_news
 ---
 {% assign current_page = params.page | default: 1 %}
-{% with_scope order_by: 'published_at desc', published_at.lt: today %}
-{% paginate contents.news by 2 %}
+
+{% if params.tag %}
+{% with_scope order_by: 'published_at desc', published_at.lt: today, tags.in: params.tag %}
+{% assign all_news = contents.news %}
+{% endwith_scope %}
+{% else %}
+{% with_scope order_by: 'published_at desc', published_at.lt: today, tags.in: params.tag %}
+{% assign all_news = contents.news %}
+{% endwith_scope %}
+{% endif %}
+
+{% paginate all_news by 2 %}
 {
   {% if paginate.total_pages != 1 %}
   "pagination": {
@@ -35,4 +45,3 @@ handle: api_news
   ]
 }
 {% endpaginate %}
-{% endwith_scope %}
