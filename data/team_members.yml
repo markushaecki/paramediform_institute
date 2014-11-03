@@ -1,16 +1,19 @@
-- "Brigitte Huwiler":
-    title: "Geschäftsinhaberin Dipl.Gesundheitsberaterin"
-    picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
+- "Jana Dobberstein":
+    title: "Dipl. Gesundheitsberaterin PMF, Diplom Oecotrophologin (FH)"
+    keynote: "Egal ob du glaubst, dass du es kannst oder glaubst, dass du es nicht kannst, du hast Recht."
+    picture: "/samples/team/jana.png" # Path to a file in the public/samples folder or to a remote and external file.
 
-- "Silvia Müllner":
-    title: "Dipl.Gesundheitsberaterin"
-    picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
+- "Jürg Ritter":
+    title: "Dipl. Gesundheitsberater PMF"
+    keynote: "Im Mittelalter hatten sie Guillotinen, Streckbänke, Peitschen und Ketten. Heutzutage haben wir ein viel effektiveres Folterwerkezeug, genannt die Badezimmerwaage. Dagegen wirkt nur Paramediform!"
+    picture: "/samples/team/juerg.png" # Path to a file in the public/samples folder or to a remote and external file.
 
-- "Fabienne Huwiler":
-    title: "Voluptatem quis eos dolore neque"
-    picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
+- "Tina Küng":
+    title: "Dipl. Gesundheitsberaterin PMF"
+    keynote: "Nichts schmeckt so gut, wie sich schlank sein anfühlt."
+    picture: "/samples/team/tina.png" # Path to a file in the public/samples folder or to a remote and external file.
 
-- "Katerin Müllner":
-    title: "Eaque recusandae voluptas dignissimos"
-    picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
-
+- "Claudia Schneider":
+    title: "Dipl. Gesundheitsberaterin PMF; Ganzheitliche Ernährungsberaterin Paracelsus; Dipl. Heilpraktikerin"
+    keynote: "Jedes Gramm weniger ist ein Stück mehr Lebensqualität."
+    picture: "/samples/team/claudia.png" # Path to a file in the public/samples folder or to a remote and external file.

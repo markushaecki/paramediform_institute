@@ -1,0 +1,11 @@
+- "Warteraum für alle Fälle":
+    picture: "/samples/institute/warteraum.png" # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Der Eingang zum Institut":
+    picture: "/samples/institute/eingang.png" # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Besprechungszimmer, hier wird gearbeitet!":
+    picture: "/samples/institute/sitzungszimmer.png" # Path to a file in the public/samples folder or to a remote and external file.
+
+- "Mit der wöchentlichen Gewichtskontroller sieht man wie man im Verhältnis zu anderen steht.":
+    picture: "/samples/institute/kurven.png" # Path to a file in the public/samples folder or to a remote and external file.

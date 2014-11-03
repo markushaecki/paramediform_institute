@@ -42,6 +42,14 @@ fields:
     localized: false
     # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
+- keynote: # The lowercase, underscored name of the field
+    label: Zitat # Human readable name of the field
+    type: text
+    required: false
+    hint: Explanatory text displayed in the back office
+    localized: false
+    # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
+
 - picture: # The lowercase, underscored name of the field
     label: Picture # Human readable name of the field
     type: file

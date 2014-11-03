@@ -11,6 +11,8 @@ response_type: application/json
 {% capture phone %}{% editable_text phone, format: raw, line_break: false, rows: 1 %}+41 62 825 04 24{% endeditable_text %}{% endcapture %}
 {% capture fax %}{% editable_text fax, format: raw, line_break: false, rows: 1 %}+41 62 825 04 78{% endeditable_text %}{% endcapture %}
 {% capture email %}{% editable_text email, format: raw, line_break: false, rows: 1 %}aarau@paramediform.ch{% endeditable_text %}{% endcapture %}
+{% capture institute_title %}{% editable_text institute_title, format: raw, line_break: false, rows: 1 %}Unsere Räumlichkeiten direkt beim Bahnhof Oerlikon{% endeditable_text %}{% endcapture %}
+{% capture institute_description %}{% editable_text institute_description, format: raw, line_break: false, rows: 1 %}Ihre Sitzungen finden in unseren Räumlichkeiten in der Gesundheitspraxis an der Ohmstrasse 28 statt. Sie finden uns im 1. Obergeschoss.{% endeditable_text %}{% endcapture %}
 
 {
   "information": {
@@ -20,6 +22,8 @@ response_type: application/json
     "city": {{ city | json }},
     "phone": {{ phone | json }},
     "fax": {{ fax | json }},
-    "email": {{ email | json }}
+    "email": {{ email | json }},
+    "institute_title": {{ institute_title | json }},
+    "institute_description": {{ institute_description | json }}
   }
 }
