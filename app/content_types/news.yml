@@ -48,6 +48,13 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
 
+- tweeted:
+    label: Tweeted?
+    type: boolean
+    required: false
+    hint: Tell if this news has been posted or no on Twitter
+    localized: false
+
 - tags: # The lowercase, underscored name of the field
     label: Tags # Human readable name of the field
     type: tags
