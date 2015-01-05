@@ -11,7 +11,7 @@ description: A description of the content type for the editors
 label_field_name: title
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
-order_by: manually
+order_by: title
 
 # Valid values: asc (ascending) and desc (descending). Set to asc by default.
 # order_direction: asc
@@ -101,7 +101,7 @@ fields:
     label: Verzichtsgefühl
     type: string
     required: false
-    hint: Emotionale befindlichkeit während des Programmes 
+    hint: Emotionale befindlichkeit während des Programmes
     localized: false
 
 - experience_title:

@@ -46,25 +46,25 @@
     illustrative_text: illustrative-text-1
     published_at: '2014-10-06'
 
-- "News 4":
-    title:
-      en: "News 4 [EN]"
-    _slug:
-      en: "news-4-en"
-    description: "Sapiente accusantium et omnis distinctio eum alias et."
-    social_media: "Tenetur ea laboriosam et."
-    text: "Consequatur magni perferendis amet. Reprehenderit et possimus ut repudiandae vitae omnis nisi odio. Quasi quod eos esse. Rerum in tempora similique illo reiciendis vero veniam."
-    tags: ['Tipps', 'Vitamine']
-    published_at: '2014-10-10'
+# - "News 4":
+#     title:
+#       en: "News 4 [EN]"
+#     _slug:
+#       en: "news-4-en"
+#     description: "Sapiente accusantium et omnis distinctio eum alias et."
+#     social_media: "Tenetur ea laboriosam et."
+#     text: "Consequatur magni perferendis amet. Reprehenderit et possimus ut repudiandae vitae omnis nisi odio. Quasi quod eos esse. Rerum in tempora similique illo reiciendis vero veniam."
+#     tags: ['Tipps', 'Vitamine']
+#     published_at: '2014-10-10'
 
-- "News 5":
-    title:
-      en: "News 5 [EN]"
-    _slug:
-      en: "news-5-en"
-    description: "Ut sit harum libero dolorum sit beatae."
-    social_media: "Amet asperiores et unde vel officiis veritatis."
-    text: "Reiciendis repellendus et est ut soluta pariatur. Ut dolores debitis vel quae. Doloremque eos aut nihil."
-    tags: ['Erfahrungsbericht']
-    published_at: '2014-11-01'
+# - "News 5":
+#     title:
+#       en: "News 5 [EN]"
+#     _slug:
+#       en: "news-5-en"
+#     description: "Ut sit harum libero dolorum sit beatae."
+#     social_media: "Amet asperiores et unde vel officiis veritatis."
+#     text: "Reiciendis repellendus et est ut soluta pariatur. Ut dolores debitis vel quae. Doloremque eos aut nihil."
+#     tags: ['Erfahrungsbericht']
+#     published_at: '2014-11-01'
 

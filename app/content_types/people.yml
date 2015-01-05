@@ -11,7 +11,7 @@ description: A description of the content type for the editors
 label_field_name: name
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
-order_by: manually
+order_by: name
 
 # Valid values: asc (ascending) and desc (descending). Set to asc by default.
 # order_direction: asc
@@ -26,20 +26,20 @@ order_by: manually
 # public_submission_accounts: ['john@example.com']
 
 # A list describing each field
-fields: 
+fields:
 - name: # The lowercase, underscored name of the field
     label: Name # Human readable name of the field
     type: string
     required: true
     hint: Explanatory text displayed in the back office
-    localized: true
+    localized: false
 
 - title: # The lowercase, underscored name of the field
     label: Title # Human readable name of the field
     type: text
     required: false
     hint: Explanatory text displayed in the back office
-    localized: false
+    localized: true
     # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - picture: # The lowercase, underscored name of the field

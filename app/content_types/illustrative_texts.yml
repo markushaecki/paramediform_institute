@@ -11,7 +11,7 @@ description: A description of the content type for the editors
 label_field_name: title
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
-order_by: manually
+order_by: published_at
 
 # Valid values: asc (ascending) and desc (descending). Set to asc by default.
 # order_direction: asc

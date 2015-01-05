@@ -39,7 +39,7 @@ fields:
     type: string
     required: false
     hint: Explanatory text displayed in the back office
-    localized: false
+    localized: true
 
 - published_at: # The lowercase, underscored name of the field
     label: Published at # Human readable name of the field
@@ -74,7 +74,7 @@ fields:
     type: text
     required: false
     hint: Explanatory text displayed in the back office
-    localized: false
+    localized: true
     # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - interview: # The lowercase, underscored name of the field
