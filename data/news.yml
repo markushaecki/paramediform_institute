@@ -1,6 +1,6 @@
-- "News 1: Interview [DE]":
+- "Aktuelles 1: Interview":
     title:
-      en: "News 1: Interview [EN]"
+      en: "News 1: Interview"
     _slug:
       en: "news-1-interview-en"
     description: "Qui excepturi non et."
@@ -10,9 +10,9 @@
     tags: ['Das sagt der Artz', 'Tipps']
     published_at: '2014-10-01'
 
-- "News 1: Interview [DE]":
+- "Aktuelles 1: Interview":
     title:
-      en: "News 1: Interview [EN]"
+      en: "News 1: Interview"
     _slug:
       en: "news-1-interview-en"
     description: "Qui excepturi non et."
@@ -22,9 +22,9 @@
     tags: ['Das sagt der Artz', 'Tipptopps']
     published_at: '2014-10-01'
 
-- "News 2: Recipe":
+- "Aktuelles 2: Rezept":
     title:
-      en: "News 2: Recipe [EN]"
+      en: "News 2: Recipe"
     _slug:
       en: "news-2-recipe-en"
     description: "Sed est magni dolorem placeat dicta eveniet corporis eum."
@@ -34,9 +34,9 @@
     recipe: recipe-1
     published_at: '2014-10-05'
 
-- "News 3: Illustrative Text [DE]":
+- "Aktuelles 3: Illustrative Text":
     title:
-      en: "News 3: Illustrative Text [EN]"
+      en: "News 3: Illustrative Text"
     _slug:
       en: "news-3-illustrative-text-en"
     description: "Sed est magni dolorem placeat dicta eveniet corporis eum."
@@ -46,25 +46,28 @@
     illustrative_text: illustrative-text-1
     published_at: '2014-10-06'
 
-# - "News 4":
-#     title:
-#       en: "News 4 [EN]"
-#     _slug:
-#       en: "news-4-en"
-#     description: "Sapiente accusantium et omnis distinctio eum alias et."
-#     social_media: "Tenetur ea laboriosam et."
-#     text: "Consequatur magni perferendis amet. Reprehenderit et possimus ut repudiandae vitae omnis nisi odio. Quasi quod eos esse. Rerum in tempora similique illo reiciendis vero veniam."
-#     tags: ['Tipps', 'Vitamine']
-#     published_at: '2014-10-10'
 
-# - "News 5":
-#     title:
-#       en: "News 5 [EN]"
-#     _slug:
-#       en: "news-5-en"
-#     description: "Ut sit harum libero dolorum sit beatae."
-#     social_media: "Amet asperiores et unde vel officiis veritatis."
-#     text: "Reiciendis repellendus et est ut soluta pariatur. Ut dolores debitis vel quae. Doloremque eos aut nihil."
-#     tags: ['Erfahrungsbericht']
-#     published_at: '2014-11-01'
+- "Aktuelles 4":
+    title:
+      en: "News 4"
+    _slug:
+      en: "news-4-en"
+    description: "Sapiente accusantium et omnis distinctio eum alias et."
+    social_media: "Tenetur ea laboriosam et."
+    text: "Consequatur magni perferendis amet. Reprehenderit et possimus ut repudiandae vitae omnis nisi odio. Quasi quod eos esse. Rerum in tempora similique illo reiciendis vero veniam."
+    tags: ['Tipps', 'Vitamine']
+    interview: interview-1
+    published_at: '2014-10-10'
+
+- "Aktuelles 5":
+    title:
+      en: "News 5"
+    _slug:
+      en: "news-5-en"
+    description: "Ut sit harum libero dolorum sit beatae."
+    social_media: "Amet asperiores et unde vel officiis veritatis."
+    text: "Reiciendis repellendus et est ut soluta pariatur. Ut dolores debitis vel quae. Doloremque eos aut nihil."
+    tags: ['Erfahrungsbericht']
+    recipe: recipe-1
+    published_at: '2014-11-01'
 
