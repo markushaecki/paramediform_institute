@@ -10,7 +10,7 @@ handle: api_news
 {% assign all_news = contents.news %}
 {% endwith_scope %}
 
-{% paginate all_news by 3 %}
+{% paginate all_news by 5 %}
 {
   {% if paginate.total_pages != 1 %}
   "pagination": {

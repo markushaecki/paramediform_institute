@@ -13,8 +13,7 @@ handle: api_illustrative_text
     {{ news_entry | json: "title,text,tags,published_at" }}
     ,"slug": {{ news_entry._slug | json }}
     ,"illustrative_text": {
-      {{ illustrative_text | json: "text" }}
-      , "image": {
+      "image": {
         "url": {{ illustrative_text.image.url | prepend: host | prepend: "http://" | json }}
       }
     }
