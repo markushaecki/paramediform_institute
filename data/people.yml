@@ -1,7 +1,3 @@
-- "John Doe":
-    title: "Doctor"
-    picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
-
 - "Jane Doe":
     title: "Specialist"
     picture: "/samples/team/picture.jpeg" # Path to a file in the public/samples folder or to a remote and external file.
