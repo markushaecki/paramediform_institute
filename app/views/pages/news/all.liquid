@@ -6,11 +6,9 @@ handle: api_news
 ---
 {% assign current_page = params.page | default: 1 %}
 
-{% with_scope order_by: 'published_at desc', published_at.lt: today, tags.in: params.tag %}
-{% assign all_news = contents.news %}
-{% endwith_scope %}
-
-{% paginate all_news by 5 %}
+{% if params.tag == empty or params.tag == null %}
+{% with_scope order_by: 'published_at desc', published_at.lt: today %}
+{% paginate contents.news by 5 %}
 {
   {% if paginate.total_pages != 1 %}
   "pagination": {
@@ -39,3 +37,37 @@ handle: api_news
   ]
 }
 {% endpaginate %}
+{% endwith_scope %}
+{% else %}
+{% with_scope order_by: 'published_at desc', published_at.lt: today, tags: params.tag %}
+{% paginate contents.news by 5 %}
+{
+  {% if paginate.total_pages != 1 %}
+  "pagination": {
+    "total_entries": {{ paginate.total_entries | json  }},
+    "total_pages": {{ paginate.total_pages | json  }},
+    "current_page": {{ paginate.current_page | json  }},
+    "next_page": {{ paginate.next_page | json }},
+    "previous_page": {{ paginate.previous_page | json }},
+    "parts": {{ paginate.parts | json }}
+  },
+  {% endif %}
+  "news": [
+    {% for news in paginate.collection join: "," %}
+    {
+      {{ news | json: "title,text,tags,published_at" }}
+      ,"slug": {{ news._slug | json }}
+      {% if news.interview %}
+      ,"type": "interview"
+      {% elsif news.illustrative_text %}
+      ,"type": "illustrative_text"
+      {% elsif news.recipe %}
+      ,"type": "recipe"
+      {% endif %}
+    }
+    {% endfor %}
+  ]
+}
+{% endpaginate %}
+{% endwith_scope %}
+{% endif %}
