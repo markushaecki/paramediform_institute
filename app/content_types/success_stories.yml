@@ -8,10 +8,10 @@ slug: success_stories
 description: A description of the content type for the editors
 
 # Slug of field used to identify entries by default, such as the title
-label_field_name: title
+label_field_name: prename
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
-order_by: title
+order_by: startdate
 
 # Valid values: asc (ascending) and desc (descending). Set to asc by default.
 # order_direction: asc
@@ -27,13 +27,6 @@ order_by: title
 
 # A list describing each field
 fields:
-- title: # The lowercase, underscored name of the field
-    label: Titel # Human readable name of the field
-    type: string
-    required: true
-    hint: Vorname der Person die abgenommen hat.
-    localized: true
-
 - prename: # The lowercase, underscored name of the field
     label: Vorname # Human readable name of the field
     type: string
@@ -79,7 +72,7 @@ fields:
 - start_date:
     label: Startzeitpunkt
     type: date
-    required: false
+    required: true
     hint: Beginn des Paramediform Programmes
     localized: false
 
