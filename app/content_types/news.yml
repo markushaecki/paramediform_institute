@@ -5,7 +5,7 @@ name: Nachricht
 slug: news
 
 # Explanatory text displayed in the back-office
-description: A description of the content type for the editors
+description: "Schreiben Sie regelmässig Nachrichten zu Ihrem Institut. Das können Jubiläen, Ankündigung neuer Mitarbeiter, Tipps zum Abnehmen, Ankündigung neuer Erfolgsgeschichten... usw. Das Haus sieht belebt aus, wenn man sieht dass regelmässig etwas geschrieben wird. (PS: Sie können ja Artikel auf Vorrat schreiben und das Datum des Postens in die Zukunft verlegen."
 
 # Slug of field used to identify entries by default, such as the title
 label_field_name: title
@@ -31,14 +31,14 @@ fields:
     label: Titel # Human readable name of the field
     type: string
     required: true
-    hint: Explanatory text displayed in the back office
+    hint: "Dieser Titel wir die Überschrift zur Nachricht sein."
     localized: true
 
 - introduction: # The lowercase, underscored name of the field
     label: Einleitung # Human readable name of the field
     type: text
     required: false
-    hint: Explanatory text displayed in the back office
+    hint: "Wie bei einem Zeitungsartikel wird die Einleitung Fett gedruckt und soll den Inhalt der Nachricht prägnant schildern."
     localized: true
     # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
@@ -46,20 +46,20 @@ fields:
     label: Text # Human readable name of the field
     type: text
     required: false
-    hint: Explanatory text displayed in the back office
+    hint: "Der Artikel ist frei zu gestalten. Sie können sowohl Texte wie auch Bilder hinzufügen."
     localized: true
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - published_at: # The lowercase, underscored name of the field
-    label: Published at # Human readable name of the field
+    label: Publikationsdatum # Human readable name of the field
     type: date
     required: false
-    hint: Explanatory text displayed in the back office
+    hint: "Geben Sie hier an wann der Artikel publiziert werden soll. Wenn Sie ein Datum in der Zukunft wählen wird es erst an diesem Datum online publiziert werden."
     localized: false
 
 - tags: # The lowercase, underscored name of the field
-    label: Tags # Human readable name of the field
+    label: Stichworte # Human readable name of the field
     type: tags
     required: false
-    hint: Explanatory text displayed in the back office
+    hint: "Geben Sie Stichworte an worüber es in Ihrer Nachricht geht. Der Benutzer wird all Ihre Nachrichten mit diesen Stichworten filtern können."
     localized: false

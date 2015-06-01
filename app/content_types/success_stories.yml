@@ -5,7 +5,7 @@ name: Erfolgsgeschichte
 slug: success_stories
 
 # Explanatory text displayed in the back-office
-description: A description of the content type for the editors
+description: "Mit guten Erfolgsgeschichten steigern Sie das Vertrauen von potentiellen Neukunden. Die Geschichten sind zudem einfach über Facebook, Twitter, Google+, oder Whatsapp mitzuteilen. Es lohnt sich deshalb gute ausführliche Erfolgsgeschichten hochzuladen."
 
 # Slug of field used to identify entries by default, such as the title
 label_field_name: prename
@@ -59,14 +59,14 @@ fields:
     label: Vorherfoto # Human readable name of the field
     type: file
     required: true
-    hint: Vorher Foto mit Seitenverhältnis Breite 4 zu Höhe 5. Beforzugterweise jpg Bilder im Format BxH 960x1280 Pixel. Damit die Echtheit der Fotos zum Vorschein kommt sollen die Bilder im eingenen Institut am stehts selben Ort gemacht werden. Zudem empfielt es sich einen Hintergrund zu haben welcher sich im Laufe der Zeit verändert (Pflanze oder Fenster). Dies erhöht die Vertraunswürdigkeit in die Echtheit der Bilder.
+    hint: "Vorher Foto mit Seitenverhältnis Breite 1 zu Höhe 2. Beforzugterweise jpg Bilder im Format BxH 640x1280 Pixel. Damit die Echtheit der Fotos zum Vorschein kommt sollen die Bilder im eingenen Institut am stehts selben Ort gemacht werden. Zudem empfielt es sich einen Hintergrund zu haben welcher sich im Laufe der Zeit verändert (Pflanze oder Fenster). Dies erhöht die Vertraunswürdigkeit in die Echtheit der Bilder."
     localized: false
 
 - after_image: # The lowercase, underscored name of the field
     label: Nachherfoto # Human readable name of the field
     type: file
     required: true
-    hint: Nachher Foto mit Seitenverhältnis Breite 4 zu Höhe 5. Beforzugterweise jpg Bilder im Format BxH 960x1280 Pixel. Damit die Echtheit der Fotos zum Vorschein kommt sollen die Bilder im eingenen Institut am stehts selben Ort gemacht werden. Zudem empfielt es sich einen Hintergrund zu haben welcher sich im Laufe der Zeit verändert (Pflanze oder Fenster). Dies erhöht die Vertraunswürdigkeit in die Echtheit der Bilder.
+    hint: "Nachher Foto mit Seitenverhältnis Breite 1 zu Höhe 2. Beforzugterweise jpg Bilder im Format BxH 640x1280 Pixel. Damit die Echtheit der Fotos zum Vorschein kommt sollen die Bilder im eingenen Institut am stehts selben Ort gemacht werden. Zudem empfielt es sich einen Hintergrund zu haben welcher sich im Laufe der Zeit verändert (Pflanze oder Fenster). Dies erhöht die Vertraunswürdigkeit in die Echtheit der Bilder."
     localized: false
 
 - start_date:

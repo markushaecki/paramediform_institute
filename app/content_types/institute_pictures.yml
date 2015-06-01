@@ -5,7 +5,7 @@ name: Institutsbilder
 slug: institute_pictures
 
 # Explanatory text displayed in the back-office
-description: A description of the content type for the editors
+description: Institutsbilder wecken beim potentiellen Neukunden vertrauen. Machen Sie schöne Bilder welche das Institut ins beste Licht stellt.
 
 # Slug of field used to identify entries by default, such as the title
 label_field_name: description
@@ -31,12 +31,12 @@ fields:
     label: Beschreibung # Human readable name of the field
     type: string
     required: true
-    hint: Beschreiben Sie das Bild
+    hint: "Beschreibung was auf dem Bild zu sehen ist (Beispiel: Wartzimmer ...)"
     localized: false
 
 - picture: # The lowercase, underscored name of the field
     label: Bild # Human readable name of the field
     type: file
     required: true
-    hint: Explanatory text displayed in the back office
+    hint: Bild von innerhalb oder ausserhalb Ihres Institutes
     localized: false

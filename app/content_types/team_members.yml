@@ -5,7 +5,7 @@ name: Mitarbeiter
 slug: team_members
 
 # Explanatory text displayed in the back-office
-description: A description of the content type for the editors
+description: Hier haben Sie die Möglichkeit sich selbst und Ihr Team zu präsentieren.
 
 # Slug of field used to identify entries by default, such as the title
 label_field_name: name
@@ -31,14 +31,14 @@ fields:
     label: Name # Human readable name of the field
     type: string
     required: true
-    hint: Explanatory text displayed in the back office
+    hint: Hier soll Vor- und Nachname des Mitarbeiters eingetragen werden.
     localized: false
 
 - title: # The lowercase, underscored name of the field
-    label: Title # Human readable name of the field
+    label: Titel # Human readable name of the field
     type: string
     required: false
-    hint: Explanatory text displayed in the back office
+    hint: "Unter Titel ist die Funktion des Mitarbeiters gemeint. Dies kann Institutsleiter, Berater usw. sein."
     localized: true
     # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
@@ -46,7 +46,7 @@ fields:
     label: Zitat # Human readable name of the field
     type: text
     required: false
-    hint: Explanatory text displayed in the back office
+    hint: "Unter Zitat können Sie etwas zum Mitarbeiter, seinem Werdegang, sein Motto oder einfach einen lustigen Spruch hinschreiben."
     localized: true
     # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
@@ -54,5 +54,5 @@ fields:
     label: Picture # Human readable name of the field
     type: file
     required: false
-    hint: Explanatory text displayed in the back office
+    hint: "Ein Portrait Bild vom Mitarbeiter. Sie dürfen ruhig ein grosses Bild hochladen. Der Benutzer kann es sich durch anklicken in voller Grösse darstellen lassen."
     localized: false
