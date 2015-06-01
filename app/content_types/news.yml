@@ -28,11 +28,19 @@ order_direction: desc
 # A list describing each field
 fields:
 - title: # The lowercase, underscored name of the field
-    label: Title # Human readable name of the field
+    label: Titel # Human readable name of the field
     type: string
     required: true
     hint: Explanatory text displayed in the back office
     localized: true
+
+- introduction: # The lowercase, underscored name of the field
+    label: Einleitung # Human readable name of the field
+    type: text
+    required: false
+    hint: Explanatory text displayed in the back office
+    localized: true
+    # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - text: # The lowercase, underscored name of the field
     label: Text # Human readable name of the field
@@ -40,7 +48,7 @@ fields:
     required: false
     hint: Explanatory text displayed in the back office
     localized: true
-    # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
+    text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - published_at: # The lowercase, underscored name of the field
     label: Published at # Human readable name of the field
@@ -55,12 +63,3 @@ fields:
     required: false
     hint: Explanatory text displayed in the back office
     localized: false
-
-- illustrative_text: # The lowercase, underscored name of the field
-    label: Illustrative text # Human readable name of the field
-    type: belongs_to
-    required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
-    # Slug of the target content type (eg post if this content type is a comment)
-    class_name: illustrative_texts

@@ -9,7 +9,7 @@ handle: api_news_entry
 {% endwith_scope %}
 {
   "news_entry": {
-    {{ news_entry | json: "title,text,tags,published_at" }}
+    {{ news_entry | json: "title,introduction,text,tags,published_at" }}
     ,"slug": {{ news_entry._slug | json }}
   }
 }

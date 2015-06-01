@@ -23,11 +23,8 @@ handle: api_news
   "news": [
     {% for news in paginate.collection join: "," %}
     {
-      {{ news | json: "title,text,tags,published_at" }}
+      {{ news | json: "title,introduction,text,tags,published_at" }}
       ,"slug": {{ news._slug | json }}
-      {% if news.illustrative_text %}
-      ,"type": "illustrative_text"
-      {% endif %}
     }
     {% endfor %}
   ]
@@ -51,11 +48,8 @@ handle: api_news
   "news": [
     {% for news in paginate.collection join: "," %}
     {
-      {{ news | json: "title,text,tags,published_at" }}
+      {{ news | json: "title,introduction,text,tags,published_at" }}
       ,"slug": {{ news._slug | json }}
-      {% if news.illustrative_text %}
-      ,"type": "illustrative_text"
-      {% endif %}
     }
     {% endfor %}
   ]
