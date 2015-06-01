@@ -56,29 +56,6 @@ fields:
     hint: Explanatory text displayed in the back office
     localized: false
 
-- social_media: # The lowercase, underscored name of the field
-    label: Social media # Human readable name of the field
-    type: string
-    required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
-
-- tweeted:
-    label: Tweeted?
-    type: boolean
-    required: false
-    hint: Tell if this news has been posted or no on Twitter
-    localized: false
-
-- interview: # The lowercase, underscored name of the field
-    label: Interview # Human readable name of the field
-    type: belongs_to
-    required: false
-    hint: Explanatory text displayed in the back office
-    localized: false
-    # Slug of the target content type (eg post if this content type is a comment)
-    class_name: interviews
-
 - illustrative_text: # The lowercase, underscored name of the field
     label: Illustrative text # Human readable name of the field
     type: belongs_to

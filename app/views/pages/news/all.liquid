@@ -25,9 +25,7 @@ handle: api_news
     {
       {{ news | json: "title,text,tags,published_at" }}
       ,"slug": {{ news._slug | json }}
-      {% if news.interview %}
-      ,"type": "interview"
-      {% elsif news.illustrative_text %}
+      {% if news.illustrative_text %}
       ,"type": "illustrative_text"
       {% endif %}
     }
@@ -55,9 +53,7 @@ handle: api_news
     {
       {{ news | json: "title,text,tags,published_at" }}
       ,"slug": {{ news._slug | json }}
-      {% if news.interview %}
-      ,"type": "interview"
-      {% elsif news.illustrative_text %}
+      {% if news.illustrative_text %}
       ,"type": "illustrative_text"
       {% endif %}
     }
