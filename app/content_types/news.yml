@@ -53,7 +53,7 @@ fields:
 - published_at: # The lowercase, underscored name of the field
     label: Publikationsdatum # Human readable name of the field
     type: date
-    required: false
+    required: true
     hint: "Geben Sie hier an wann der Artikel publiziert werden soll. Wenn Sie ein Datum in der Zukunft wählen wird es erst an diesem Datum online publiziert werden."
     localized: false
 
