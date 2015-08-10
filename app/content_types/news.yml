@@ -32,14 +32,14 @@ fields:
     type: string
     required: true
     hint: "Dieser Titel wir die Überschrift zur Nachricht sein."
-    localized: true
+    localized: false
 
 - introduction: # The lowercase, underscored name of the field
     label: Einleitung # Human readable name of the field
     type: text
     required: false
     hint: "Wie bei einem Zeitungsartikel wird die Einleitung Fett gedruckt und soll den Inhalt der Nachricht prägnant schildern."
-    localized: true
+    localized: false
     # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - text: # The lowercase, underscored name of the field
@@ -47,7 +47,7 @@ fields:
     type: text
     required: false
     hint: "Der Artikel ist frei zu gestalten. Sie können sowohl Texte wie auch Bilder hinzufügen."
-    localized: true
+    localized: false
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - published_at: # The lowercase, underscored name of the field
