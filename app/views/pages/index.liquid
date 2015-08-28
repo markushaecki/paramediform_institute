@@ -1,19 +1,22 @@
 ---
-title: Institutseinleitung und Gewichtskurve
+title: Begrüssung
 published: true
 handle: api_information
 response_type: application/json
 ---
-{% capture institute_title %}{% editable_text "Begrüssungstitel", format: raw, line_break: false, rows: 1, priority:"5" %}Unsere Räumlichkeiten direkt beim Bahnhof{% endeditable_text %}{% endcapture %}
+{% capture institute_title %}{% editable_text "Begrüssungstitel", format: raw, line_break: false, rows: 1, priority:"5" %}{% endeditable_text %}{% endcapture %}
 {% capture institute_description %}{% editable_text "Begrüssungstext", format: html, line_break: false, rows: 1, priority:"4" %}{% endeditable_text %}{% endcapture %}
 {% capture image %}{% editable_file "Institutsbild", priority:"3", hint: "Willkommensbild mit Seitenverhaeltnis Breite 3 zu Hoehe 1." %}{% endeditable_file %}{% endcapture %}
-{% capture weight_curve %}{% editable_file "Gewichtskruve", priority:"2", hint: "Aktuelle Gewichtskurve" %}/samples/institute/kurven.png{% endeditable_file %}{% endcapture %}
 
+{% if image.size > 0 %}
+{% capture full_image %}{{image | prepend: host | prepend: "http://"}}{% endcapture %}
+{% else %}
+{% capture full_image %}{% endcapture %}
+{% endif %}
 {
   "information": {
-    "image": {{ image | prepend: host | prepend: "http://" | json }},
+    "image": {{ full_image | json }},
     "institute_title": {{ institute_title | json }},
-    "institute_description": {{ institute_description | json }},
-    "weight_curve": {{ weight_curve | prepend: host | prepend: "http://" | json }}
+    "institute_description": {{ institute_description | json }}
   }
 }

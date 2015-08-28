@@ -101,7 +101,7 @@ fields:
     label: Beobachtungen
     type: string
     required: false
-    hint: Emotionale Befindlichkeit während des Programmes
+    hint: Emotionale Befindlichkeit während des Programmes (1 bis max 2 Stichworte)
     localized: false
 
 - experience_title:

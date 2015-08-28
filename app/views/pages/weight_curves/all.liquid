@@ -1,0 +1,18 @@
+---
+title: JSON alle Gewichtskurven
+published: true
+response_type: application/json
+handle: api_weight_curves
+---
+{
+  "weight_curves": [
+    {% for weight_curve in contents.weight_curves join: "," %}
+    {
+      "updated_at": {{ weight_curve.updated_at | localized_date: "%d. %B %Y" | json }},,
+      "image": {
+        "url": {{ weight_curve.image.url | prepend: host | prepend: "http://" | json }}
+      },
+    }
+    {% endfor %}
+  ]
+}
