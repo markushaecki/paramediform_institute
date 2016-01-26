@@ -1,29 +1,22 @@
 ---
-title: Kontaktinformationen zum Institut
+title: Begrüssung
 published: true
 handle: api_information
 response_type: application/json
 ---
-{% capture street %}{% editable_text "Strasse", format: raw, line_break: false, rows: 1, priority:"10", hint: "Falls die Adresse geändert wird, muss die Zentrale die Koordinaten des Institutes neu eingeben. Kontaktieren Sie deshalb die Zentrale auf: info@paramediform.ch" %}Musterstrasse 7{% endeditable_text %}{% endcapture %}
-{% capture city %}{% editable_text "Ort", format: raw, line_break: false, rows: 1, priority:"9" %}8888 Muster{% endeditable_text %}{% endcapture %}
-{% capture phone %}{% editable_text "Telefon", format: raw, line_break: false, rows: 1, priority:"8" %}+41 11 111 11 11{% endeditable_text %}{% endcapture %}
-{% capture fax %}{% editable_text "Fax", format: raw, line_break: false, rows: 1, priority:"7" %}+41 11 111 11 12{% endeditable_text %}{% endcapture %}
-{% capture email %}{% editable_text "E-Mail", format: raw, line_break: false, rows: 1, priority:"6" %}muster@paramediform.ch{% endeditable_text %}{% endcapture %}
-{% capture institute_title %}{% editable_text "Begrüssungstitel", format: raw, line_break: false, rows: 1, priority:"5" %}Unsere Räumlichkeiten direkt beim Bahnhof{% endeditable_text %}{% endcapture %}
+{% capture institute_title %}{% editable_text "Begrüssungstitel", format: raw, line_break: false, rows: 1, priority:"5" %}{% endeditable_text %}{% endcapture %}
 {% capture institute_description %}{% editable_text "Begrüssungstext", format: html, line_break: false, rows: 1, priority:"4" %}{% endeditable_text %}{% endcapture %}
-{% capture image %}{% editable_file "Institutsbild", priority:"3", hint: "Willkommensbild mit Seitenverhaeltnis Breite 3 zu Hoehe 1." %}/samples/institute/institute.jpg{% endeditable_file %}{% endcapture %}
-{% capture weight_curve %}{% editable_file image, priority:"2", hint: "Aktuelle Gewichtskurve" %}/samples/institute/kurven.png{% endeditable_file %}{% endcapture %}
+{% capture image %}{% editable_file "Institutsbild", priority:"3", hint: "Willkommensbild mit Seitenverhaeltnis Breite 3 zu Hoehe 1." %}{% endeditable_file %}{% endcapture %}
 
+{% if image.size > 0 %}
+{% capture full_image %}{{image | prepend: host | prepend: "http://"}}{% endcapture %}
+{% else %}
+{% capture full_image %}{% endcapture %}
+{% endif %}
 {
   "information": {
-    "image": {{ image | prepend: host | prepend: "http://" | json }},
-    "street": {{ street | json }},
-    "city": {{ city | json }},
-    "phone": {{ phone | json }},
-    "fax": {{ fax | json }},
-    "email": {{ email | json }},
+    "image": {{ full_image | json }},
     "institute_title": {{ institute_title | json }},
-    "institute_description": {{ institute_description | json }},
-    "weight_curve": {{ weight_curve | prepend: host | prepend: "http://" | json }}
+    "institute_description": {{ institute_description | json }}
   }
 }

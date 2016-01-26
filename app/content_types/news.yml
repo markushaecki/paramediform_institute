@@ -5,7 +5,7 @@ name: Nachricht
 slug: news
 
 # Explanatory text displayed in the back-office
-description: "Schreiben Sie regelmässig Nachrichten zu Ihrem Institut. Das können Jubiläen, Ankündigung neuer Mitarbeiter, Tipps zum Abnehmen, Ankündigung neuer Erfolgsgeschichten... usw. Ihre Institutsseite sieht belebt aus, wenn man sieht dass regelmässig etwas geschrieben wird. (PS: Sie können ja Artikel auf Vorrat schreiben und das Publikationsdatum in die Zukunft verschieben)"
+description: "Schreiben Sie regelmässig Nachrichten zu Ihrem Institut. Das können Jubiläen, Ankündigung neuer Mitarbeiter, Tipps zum Abnehmen, Ankündigung neuer Erfolgsgeschichten... usw. Ihre Institutsseite sieht belebt aus, wenn man sieht dass regelmässig etwas geschrieben wird. - PS: Sie können Artikel auf Vorrat schreiben und das Publikationsdatum in die Zukunft verschieben"
 
 # Slug of field used to identify entries by default, such as the title
 label_field_name: title
@@ -32,14 +32,14 @@ fields:
     type: string
     required: true
     hint: "Dieser Titel wir die Überschrift zur Nachricht sein."
-    localized: true
+    localized: false
 
 - introduction: # The lowercase, underscored name of the field
     label: Einleitung # Human readable name of the field
     type: text
     required: false
     hint: "Wie bei einem Zeitungsartikel wird die Einleitung Fett gedruckt und soll den Inhalt der Nachricht prägnant schildern."
-    localized: true
+    localized: false
     # text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - text: # The lowercase, underscored name of the field
@@ -47,7 +47,7 @@ fields:
     type: text
     required: false
     hint: "Der Artikel ist frei zu gestalten. Sie können sowohl Texte wie auch Bilder hinzufügen."
-    localized: true
+    localized: false
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - published_at: # The lowercase, underscored name of the field
