@@ -8,7 +8,7 @@ handle: api_team_members
   "team_members": [
     {% for member in contents.team_members join: "," %}
     {
-      {{ member | json: "name,title,keynote" }},
+      {{ member | json: "name,title,keynote" }},,
       "picture": {
         "url": {{ member.picture.url | prepend: host | prepend: "http://" | json }}
       }

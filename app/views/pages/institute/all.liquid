@@ -8,7 +8,7 @@ handle: api_institute_pictures
   "institute_pictures": [
     {% for institute_picture in contents.institute_pictures join: "," %}
     {
-      "description": {{ institute_picture.description | json }},
+      "description": {{ institute_picture.description | json }},,
       "picture": {
         "url": {{ institute_picture.picture.url | prepend: host | prepend: "http://" | json }}
       },

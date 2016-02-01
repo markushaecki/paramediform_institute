@@ -7,7 +7,7 @@ handle: api_news
 {% assign current_page = params.page | default: 1 %}
 
 {% if params.tag == empty or params.tag == null %}
-{% with_scope order_by: 'published_at desc', published_at.lt: today %}
+{% with_scope order_by: 'published_at desc', published_at.lt: today + 1 %}
 {% paginate contents.news by 5 %}
 {
   {% if paginate.total_pages != 1 %}
@@ -32,7 +32,7 @@ handle: api_news
 {% endpaginate %}
 {% endwith_scope %}
 {% else %}
-{% with_scope order_by: 'published_at desc', published_at.lt: today, tags: params.tag %}
+{% with_scope order_by: 'published_at desc', published_at.lt: today + 1, tags: params.tag %}
 {% paginate contents.news by 5 %}
 {
   {% if paginate.total_pages != 1 %}

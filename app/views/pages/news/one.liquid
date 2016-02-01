@@ -4,7 +4,7 @@ published: true
 response_type: application/json
 handle: api_news_entry
 ---
-{% with_scope _slug: params.slug, published_at.lt: today %}
+{% with_scope _slug: params.slug, published_at.lt: today + 1 %}
 {% assign news_entry = contents.news.first %}
 {% endwith_scope %}
 {

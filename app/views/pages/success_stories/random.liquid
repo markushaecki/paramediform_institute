@@ -4,13 +4,7 @@ published: true
 response_type: application/json
 handle: api_random_success_story
 ---
-{% if params.frontsite %}
-{% with_scope frontpage_enabled: true %}
 {% assign success_story = contents.success_stories | sample %}
-{% endwith_scope %}
-{% else %}
-{% assign success_story = contents.success_stories | sample %}
-{% endif %}
 
 {
   "success_story": {
