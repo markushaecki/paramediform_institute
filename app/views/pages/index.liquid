@@ -9,7 +9,7 @@ response_type: application/json
 {% capture image %}{% editable_file "Institutsbild", priority:"3", hint: "Willkommensbild mit Seitenverhaeltnis Breite 3 zu Hoehe 1." %}{% endeditable_file %}{% endcapture %}
 
 {% if image.size > 0 %}
-{% capture full_image %}{{image | prepend: host | prepend: "http://"}}{% endcapture %}
+{% capture full_image %}{{ image }}{% endcapture %}
 {% else %}
 {% capture full_image %}{% endcapture %}
 {% endif %}

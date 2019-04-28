@@ -21,11 +21,11 @@ handle: api_news
   },
   {% endif %}
   "news": [
-    {% for news in paginate.collection join: "," %}
-    {
-      {{ news | json: "title,introduction,text,tags,published_at" }}
-      ,"slug": {{ news._slug | json }}
-    }
+    {% for news in paginate.collection %}
+      {
+        {{ news | json: "title,introduction,text,tags,published_at" | open_json }},
+        "slug": {{ news._slug | json }}
+      }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
 }
@@ -46,11 +46,11 @@ handle: api_news
   },
   {% endif %}
   "news": [
-    {% for news in paginate.collection join: "," %}
-    {
-      {{ news | json: "title,introduction,text,tags,published_at" }}
-      ,"slug": {{ news._slug | json }}
-    }
+    {% for news in paginate.collection %}
+      {
+        {{ news | json: "title,introduction,text,tags,published_at" | open_json }}
+        ,"slug": {{ news._slug | json }}
+      }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
 }

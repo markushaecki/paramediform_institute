@@ -7,9 +7,14 @@ handle: api_news_entry
 {% with_scope _slug: params.slug, published_at.lt: today + 1 %}
 {% assign news_entry = contents.news.first %}
 {% endwith_scope %}
-{
-  "news_entry": {
-    {{ news_entry | json: "title,introduction,text,tags,published_at" }}
-    ,"slug": {{ news_entry._slug | json }}
+
+{% if news_entry %}
+  {
+    "news_entry": {
+      {{ news_entry | json: "title,introduction,text,tags,published_at" | open_json }},
+      "slug": {{ news_entry._slug | json }}
+    }
   }
-}
+{% else %}
+  { "news_entry": null }
+{% endif %}

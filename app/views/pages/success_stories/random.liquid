@@ -4,7 +4,7 @@ published: true
 response_type: application/json
 handle: api_random_success_story
 ---
-{% assign success_story = contents.success_stories | sample %}
+{% assign success_story = contents.success_stories.all | shuffle | first %}
 
 {
   "success_story": {
@@ -14,10 +14,10 @@ handle: api_random_success_story
     "lost_weight": {{ success_story.lost_weight | json }},
     "slug": {{ success_story._slug | json }},
     "before_image": {
-      "url": {{ success_story.before_image.url | prepend: host | prepend: "http://" | json }}
+      "url": {{ success_story.before_image.url | json }}
     },
     "after_image": {
-      "url": {{ success_story.after_image.url | prepend: host | prepend: "http://" | json }}
+      "url": {{ success_story.after_image.url | json }}
     }
   }
 }
