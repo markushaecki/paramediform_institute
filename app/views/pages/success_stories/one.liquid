@@ -22,10 +22,18 @@ handle: api_success_story
       "experience": {{ success_story.experience | json }},
       "slug": {{ success_story._slug | json }},
       "before_image": {
-        "url": {{ success_story.before_image.url | json }}
+        {% if wagon %}
+          "url": {{ success_story.before_image.url | prepend: host | prepend: "http://" | json }}
+        {% else %}
+          "url": {{ success_story.before_image.url | json }}
+        {% endif %}
       },
       "after_image": {
-        "url": {{ success_story.after_image.url | json }}
+        {% if wagon %}
+          "url": {{ success_story.after_image.url | prepend: host | prepend: "http://" | json }}
+        {% else %}
+          "url": {{ success_story.after_image.url | json }}
+        {% endif %}
       }
     }
   ]

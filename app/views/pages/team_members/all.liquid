@@ -10,7 +10,11 @@ handle: api_team_members
       {
         {{ member | json: "name,title,keynote" | open_json }},
         "picture": {
-          "url": {{ member.picture.url | json }}
+          {% if wagon %}
+            "url": {{ member.picture.url | prepend: host | prepend: "http://" | json }}
+          {% else %}
+            "url": {{ member.picture.url | json }}
+          {% endif %}
         }
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}

@@ -10,8 +10,12 @@ handle: api_weight_curves
       {
         "updated_at": {{ weight_curve.updated_at | localized_date: "%d. %B %Y" | json }},
         "image": {
-          "url": {{ weight_curve.image.url | json }}
-        },
+          {% if wagon %}
+            "url": {{ weight_curve.image.url | prepend: host | prepend: "http://" | json }}
+          {% else %}
+            "url": {{ weight_curve.image.url | json }}
+          {% endif %}
+        }
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]

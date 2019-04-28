@@ -10,7 +10,11 @@ handle: api_institute_pictures
       {
         "description": {{ institute_picture.description | json }},
         "picture": {
-          "url": {{ institute_picture.picture.url | json }}
+          {% if wagon %}
+            "url": {{ institute_picture.picture.url | prepend: host | prepend: "http://" | json }}
+          {% else %}
+            "url": {{ institute_picture.picture.url | json }}
+          {% endif %}
         }
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
